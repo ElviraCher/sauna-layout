@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ElviraCher/sauna-layout/issues"
   },
-  "homepage": "https://github.com/ElviraCher/sauna-layout#readme"
+  "homepage": "https://github.com/ElviraCher/sauna-layout#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
