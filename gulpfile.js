@@ -3,6 +3,8 @@ import { path } from "./gulp/config/path.js";
 import { plugins } from "./gulp/config/plugins.js";
 
 global.app = {
+    isBuild: process.argv.includes('--build'), // хранит ли переменная флаг duild
+    isDev: !process.argv.includes('--build'),
     path: path,
     gulp: gulp,
     plugins: plugins
@@ -26,7 +28,7 @@ function watcher() {
     gulp.watch(path.watch.images, images);
 }
 
-export { svgSprite } //чтобы можно было отдельно вызывать команду для svg
+export { svgSprite }; //чтобы можно было отдельно вызывать команду для svg
 
 //Последовательня обработка шрифтов
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
@@ -36,6 +38,10 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 
 //Сценарии выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
+const build = gulp.series(reset, mainTasks);
+
+export { dev };
+export { build };
 
 //Сценарий по умолчанию
 gulp.task("default", dev);
