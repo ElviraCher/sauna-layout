@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
+    "dev": "gulp",
     "svgSprite": "gulp svgSprite"
   },
   "repository": {
