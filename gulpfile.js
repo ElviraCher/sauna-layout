@@ -19,6 +19,7 @@ import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSprite } from "./gulp/tasks/svgSprite.js";
+import { deploy } from "./gulp/tasks/deploy.js";
 
 function watcher() {
     gulp.watch(path.watch.files, copy);
@@ -39,9 +40,11 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images)
 //Сценарии выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
+const deployGhPages = gulp.series(reset, mainTasks, deploy);
 
 export { dev };
 export { build };
+export { deployGhPages };
 
 //Сценарий по умолчанию
 gulp.task("default", dev);
