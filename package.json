@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "deploy": "gulp deployGhPage --build",
+    "deploy": "gulp deployGhPages --build",
     "svgSprite": "gulp svgSprite"
   },
   "repository": {
