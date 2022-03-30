@@ -1,0 +1,47 @@
+@import "fonts";
+@import "header";
+@import "svg";
+
+:root {
+   /* color */
+   --blue-1: #2168de;
+   --white-1: #ffffff;
+   --gray-1: #e5e5e5;
+   --gray-2: #333333;
+   --gray-3: #afb3bb;
+   --gray-4: #CFD4DA;
+
+   /* typography */
+   --family-main: "Gilroy";
+   --family-extra: "Roboto";
+   --size-1: 16px;
+   --size-2: 14px;
+   --size-3: 24px;
+   --weight-regular: 400;
+   --weight-medium: 500;
+   --weight-semibold: 600;
+   --weight-bold: 700;
+   --weight-extrabold: 800;
+
+   /* borders */
+   --radius: 2rem;
+}
+
+body {
+   margin: 0;
+   background-color: var(--gray-1);
+   font-family: var(--family-main);
+   font-size: var(--size);
+   color: var(--gray-2);
+
+   a {
+      text-decoration: none;
+   }
+
+   li {
+      list-style-type: none;
+   }
+   ul {
+      padding-left: 0;
+   }
+}
