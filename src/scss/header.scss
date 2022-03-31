@@ -1,0 +1,146 @@
+.header {
+   font-weight: var(--weight-semibold);
+   background-color: var(--white-1);
+   box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.05);
+   width: 100%;
+   position: fixed;
+}
+
+.header__container {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 4rem;
+   gap: 4rem;
+   max-height: 4.5rem;
+   white-space: nowrap;
+}
+
+.header__menu {
+   flex: 1;
+}
+
+.menu {
+   &__list {
+      display: flex;
+      gap: 1.5rem;
+   }
+   &__item {
+      align-self: center;
+      justify-self: center;
+   }
+   &__icons {
+      display: flex;
+      gap: 1.5rem;
+   }
+   &__link {
+      white-space: nowrap;
+      color: var(--gray-2);
+      &:hover {
+         color: var(--blue-1);
+      }
+   }
+}
+.menu__link--active {
+   color: var(--blue-1);
+   &:hover {
+      text-shadow: 0.125rem 0.125rem 0.3125rem var(--gray-2);
+   }
+}
+
+.menu__link--unactive {
+   color: var(--gray-3);
+   position: relative;
+}
+
+.logo {
+   font-weight: var(--weight-extrabold);
+   font-size: var(--size-3);
+}
+.icon__menu {
+   display: none;
+}
+
+.button {
+   border-radius: var(--radius);
+   border: 0.0625rem solid var(--gray-4);
+   padding: 0.5rem 1rem;
+   font-size: var(--size-2);
+
+   &--active {
+      border-color: var(--blue-1);
+   }
+}
+
+.button ._active {
+   color: var(--blue-1);
+}
+
+.button ._unactive {
+   color: var(--gray-2);
+}
+
+@media (max-width: 1289px) {
+   .header__menu .menu__item:nth-child(6) {
+            display: none;
+            
+         }
+}
+@media (max-width: 1204px) {
+   .header__menu .menu__item:nth-child(5) {
+            display: none;
+            
+         }
+}
+
+@media (max-width: 1056px) {
+   .header__menu .menu__item:nth-child(4){
+            display: none;
+            
+         }
+}
+
+@media (max-width: 960px) {
+   .header__menu .menu__item:nth-child(3) {
+            display: none;
+            
+         }
+}
+
+@media (max-width: 870px) {
+   .header__menu .menu__item:nth-child(2) {
+            display: none;
+            
+         }
+}
+
+@media (max-width: 806px) {
+   .header__menu .menu__item:nth-child(1) {
+            display: none;
+            
+         }
+}
+
+@media (max-width: 767px) {
+   .button {
+      display: none;
+   }
+
+   .header__menu {
+      display: none;
+   }
+
+   .header__container {
+      margin: 1rem;
+      max-height: 3.5rem;
+   }
+
+   .menu__icons {
+      gap: 1rem;
+   }
+
+   .icon__menu {
+      display: block;
+   }
+}
