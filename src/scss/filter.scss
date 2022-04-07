@@ -1,0 +1,113 @@
+.filter__wrapper {
+  margin: 3rem 0 0 4rem;
+}
+.filter__header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.filter__item, .filter__item--extra {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  white-space: nowrap;
+}
+
+.filter__article {
+  font-size: var(--size-5);
+  font-weight: var(--weight-bold);
+}
+
+.options__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.options__item {
+  align-self: flex-start;
+  justify-self: center;
+}
+
+.find {
+  border-radius: var(--border);
+  border: 0.0625rem solid var(--gray-4);
+  padding: 0.5rem 1rem;
+  font-size: var(--size-2);
+}
+
+.clean {
+  font-size: var(--size-6);
+  font-weight: var(--weight-semibold);
+  color: var(--blue-1);
+  border-radius: var(--radius);
+  background-color: var(--gray-6);
+  padding: 1rem;
+  width: 100%;
+}
+
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid var(--gray-4);
+  background-color: var(--white-1);
+  border-radius: var(--border);
+  margin-right: 0.5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.checkbox:checked + label::before {
+  border-color: var(--blue-1);
+  background-color: var(--blue-1);
+  background-image: url("/img/check_filter.svg");
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+input:disabled + label {
+  color: var(--gray-3);
+}
+
+.show__link {
+  color: var(--blue-1);
+  font-size: var(--size-2);
+  font-weight: var(--weight-regular);
+  cursor: pointer;
+}
+
+.company {
+  display: block;
+}
+
+.company.hidden {
+  display: none;
+}
