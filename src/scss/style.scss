@@ -1,22 +1,31 @@
 @import "fonts";
 @import "header";
 @import "svg";
+@import "main";
+@import "filter";
+@import "navigation";
 
 :root {
    /* color */
    --blue-1: #2168de;
-   --white-1: #ffffff;
+   --white-1:#ffffff;
    --gray-1: #e5e5e5;
    --gray-2: #333333;
    --gray-3: #afb3bb;
    --gray-4: #CFD4DA;
+   --gray-5: #52575F;
+   --gray-6: #F2F4F7;
+   --black-1: #000000;
 
    /* typography */
-   --family-main: "Gilroy";
-   --family-extra: "Roboto";
+   --family-main: Gilroy;
+   --family-extra: Roboto;
    --size-1: 16px;
    --size-2: 14px;
    --size-3: 24px;
+   --size-4: 36px;
+   --size-5: 15px;
+   --size-6: 17px;
    --weight-regular: 400;
    --weight-medium: 500;
    --weight-semibold: 600;
@@ -25,13 +34,21 @@
 
    /* borders */
    --radius: 0.625rem;
+   --border: 0.3125rem;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
 }
 
 body {
    margin: 0;
    background-color: var(--gray-1);
    font-family: var(--family-main);
-   font-size: var(--size);
+   font-size: var(--size-1);
+   font-weight: var(--weight-regular);
    color: var(--gray-2);
 
    a {
@@ -44,4 +61,9 @@ body {
    ul {
       padding-left: 0;
    }
+}
+
+.body__wrapper {
+   display: flex;
+   margin: 0 4rem;
 }
